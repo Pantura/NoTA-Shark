@@ -1,2 +1,8 @@
 This is my project for a Wireshark dissector to dissect NoTA (Network on 
 Terminal Architecture) protocol on tcp/ip transport.
+Information on NoTA can be found at http://projects.developer.nokia.com/NoTA
+
+Dissector functionality is split into 2 files for low and high level functionality.
+packet-nota_down.c  contains the transport level messages of L_IN_down
+packet-nota.c contains dissection for both L_IN_up  and H_IN parts of the protocol.
+L_IN part calls on the functions of H_IN when such are needed.
